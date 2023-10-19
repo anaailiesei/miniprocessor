@@ -19,13 +19,13 @@ In the main:
      - 01 - '\-'
      - 10 - '*'
      - 11 - '/'
-3.3. Return the operation.
+- Return the operation.
 4. Print Dim by calling the function get_dim():
    Function get_dim (returns the value of Dim):
-4.1. Use a mask to obtain the 4 bits corresponding to the dimension (dim).
+  - Use a mask to obtain the 4 bits corresponding to the dimension (dim).
 These bits immediately follow the bits corresponding to the operations.
-4.2. Convert the obtained binary number into decimal.
-4.3. Return the obtained number + 1.
+- Convert the obtained binary number into decimal.
+-  Return the obtained number + 1.
 
 # Second Task:
 ## Execute instruction (without operator precedence rule)
