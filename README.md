@@ -16,7 +16,7 @@ In the main:
   - Use a mask to obtain the two bits corresponding to the N-th operation (divide by 2 raised to the -position of the bit to be found - and find the remainder when divided by 2).
   -  Use the following encoding to determine the operation:
      - 0 - '+'
-     - 01 - '-'
+     - 01 - '\-'
      - 10 - '*'
      - 11 - '/'
 3.3. Return the operation.
