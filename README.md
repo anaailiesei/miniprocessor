@@ -97,5 +97,5 @@ Jump from the current index to the index of the last term used and continue the 
 Perform the calculation between the result and the current operand.\
 Store the result in the "rezultat" variable.\
 	iv. Move on to a new iteration.\
-Return the value of the "rezultat" variable.\
+Return the value of the "rezultat" variable.
 7. Display the result.
