@@ -50,51 +50,34 @@ actual) si operandul actual folosind operatia corespunzatoare celor doi
 10. Se printeaza rezultatul
 
 # Third task:
-## Execute instructions when operands have weird dimension (not divisible by 4)
+## Execute instructions when operands have weird dimensions (not divisible by 4)
 
-In main:
-1. Se citeste prima instructiune inst
-2. Se obtin valorile pentru N si Dim apeland functiile get_N() si get_dim()
-3. Intr-un pointer de char-uri (operatii) se retin operatiile apeland functia
-get_Nth_op()
-5. Se afla cate instructiuni se citesc apoi pentru operanzi (nr_citiri) 
-folosind formula
-din enunt 
-4. contor = contor folosit pentru a sti cati operanzi s-au parcurs
-5. Se initializeaza rezultatul cu 0
-6. Se citesc instructiunile pentru operanzi (instr)
-7. Pentru fiecare instructiune in parte: 
-    Se parcurge instructiunea pe "bucatele" de biti de dimensiune Dim
-    (bitii se aflta tot cu ajutorul unei masti = 2 la puterea -pozitia bitului-
-    si restul la impartirea cu 2) si se transforma numarul obtinut din decimal
-    in binar
-    Daca o "bucatica" este prea mare, se afla bitii care incap in instructiunea
-    curenta si se transforma numarul din binar in decimal.
-    Se trece apoi la urmatoarea instructiune si se afla bitii ramasi. Numarul
-    rezultat prin concatenarea bitilor este transformat din baza 2 in baza 10.
-8. Se reazlizeaza calculul dintre rezultat (tot ce a fost inainte de operandul
-actual) si operandul actual folosind operatia corespunzatoare celor doi 
-(operatia cu indexul contor-1)
-9. Se printeaza rezultatul
+In the main:
+
+1. Read the first instruction, inst.
+2. Obtain the values for N and Dim by calling the functions get_N() and get_dim().
+3. Store the operations in a char pointer (operations) by calling the function get_Nth_op().
+4. Find out how many instructions are being read for operands (nr_citiri) using the formula provided in the statement.
+5. Initialize the result to 0.
+6. Read the instructions for operands (instr).
+7. Use a mask to determine the bits corresponding to each operand (iterate through instr in sections of size Dim).
+8. Convert the binary number obtained into decimal.
+9. Perform the calculation between the result (everything before the current operand) and the current operand using the operation corresponding to the two (the operation with the index contor-1).
+10. Print the result.
 
 # Fourth Task
 ## Execute instruction (with operator precedence rule)
 
-1. Se citeste prima instructiune inst
-2. Se obtin valorile pentru N si Dim apeland functiile get_N() si get_dim()
-3. Intr-un pointer de char-uri (operatii) se retin operatiile apeland functia
-get_Nth_op()
-4. "prioritate_op"	- vectorul care contine prioritatile operatiilor din 
-vectorul "operatii" (0 pentru + sau -, 1 pentru * sau /). El se obtine apeland
-functia "prioritate_operatie" care are rolul de a-i atribui fiecarei operatii
-o prioritate
-	Functia primeste 3 parametrii: 
-		- numarul de operatii "N"
-		- vectorul "operatii"
-		- vectorul "prioritate_op"
-	Se parcurge vectorul "operatii" element cu element
-	Fiecarui element din "oeratii" i se atribuie un numar (0 pentru + sau -, 
-    1 pentru * sau /) care semnifica prioritatea operatiei
+1. Read the first instruction, inst.
+2. Obtain the values for N and Dim by calling the functions get_N() and get_dim().
+3. Store the operations in a char pointer (operations) by calling the function get_Nth_op().
+4. prioritate_op - a vector that contains the priorities of operations from the "operations" vector (0 for + or -, 1 for * or /). It is obtained by calling the function "prioritate_operatie," which assigns a priority to each operation.
+	The function takes three parameters:
+	- the number of operations, "N"
+	- the "operations" vector
+	- the "prioritate_op" vector
+	Iterate through the "operations" vector element by element.
+	Each element of "operations" is assigned a number (0 for + or -, 1 for * or /) that signifies the operation's priority.
 5. "operanzi" - vectorul care contine operanzii (in baza 10)
 Vectorul se obtine apeland functia get_operanzi care este o extindere a
 functionalitatii task-ului 3. In loc sa se calculeze un rezultat, de fiecare
