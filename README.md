@@ -70,49 +70,29 @@ In the main:
 	- the "prioritate_op" vector\
 	Iterate through the "operations" vector element by element.\
 	Each element of "operations" is assigned a number (0 for + or -, 1 for * or /) that signifies the operation's priority.
-6. "operanzi" - vectorul care contine operanzii (in baza 10)\
-Vectorul se obtine apeland functia get_operanzi care este o extindere a
-functionalitatii task-ului 3. In loc sa se calculeze un rezultat, de fiecare
-data cand se obtine un operand acesta se "retine" in vectorul operanzi
-7. Rezultatul se calculeaza folosind functia "calculator":\
-Functia primeste 4 parametrii:
-		- N = numarul de operatii
-		- vectorul "operanzi" 
-		- vectorul "operatii"
-		- vectorul "prioritate_op"\
-Se parcurg toti operanzii, incepand de la cel de-al doilea (index 1), intr-un
-"for" de la 0 la N
-Se disting urmatoarele cazuri:
-	i. Prima operatie din sir este de prioritate 1: 
-	- se efectueaza toate operatiile de prioritate 1 succesive, pana se ajunge 
-	la o operatie de prioritate 0 sau pana cand se ajunge la finalul sirului
-    de operatii
-	- se retine rezultatul intr-o variabila rezultat
-	- se sare de la indexul actual la indexul ultimului termen utilizat si se
-    continua algoritmul
-
-	ii. Prima operatie din sir este de prioritate 0, dar dupa ea urmeaza o
-	operatie de prioritate 1 
-	- se efectueaza toate operatiile de prioritate 1 care urmeaza, pana se
-    ajunge
-	la o operatie de prioritate 0 sau pana cand se ajunge la finalul sirului
-    de operatii
-	- rezultatul se retine intr-o variabila intermediara de rezultat
-    intermediar
-	- se efectueaza si prima operatie, dintre rezultatul intermediar si primul
-    operand
-    - rezultatul se retine intr-o variabila rezultat
-	- se sare de la indexul actual la indexul ultimului termen utilizat si se
-    continua algoritmul
-
-	iii. Operatiile de dinainte si de dupa operandul curent sunt de
-    prioritate 0
-	- se efectueaza calculul dintre rezultat si operandul curent 
-	- rezultatul se retine in variabila rezultat
-
-	*iv. se trece la o noua iteratie
-
-	Se returneaza valoarea variabilei rezultat
-
-8. Se afiseaza rezultatul 
- 
+5. operanzi - a vector that contains the operands (in base 10).\
+The vector is obtained by calling the function get_operanzi, which is an extension of the functionality from task 3. Instead of calculating a result, each time an operand is obtained, it is stored in the "operanzi" vector.
+6. Calculate the result using the function "calculator":\
+The function takes four parameters:
+- N = the number of operations
+- the "operanzi" vector
+- the "operations" vector
+- the "prioritate_op" vector\
+Iterate through all operands, starting from the second one (index 1), in a "for" loop from 0 to N.\
+Distinguish the following cases:\
+i. The first operation in the sequence has a priority of 1:\
+Perform all successive operations with a priority of 1 until you encounter an operation with a priority of 0 or reach the end of the operation sequence.\
+Store the result in a variable, "rezultat."\
+Jump from the current index to the index of the last term used and continue the algorithm.
+ii. The first operation in the sequence has a priority of 0, but a priority-1 operation follows it:\
+Perform all successive operations with a priority of 1 that follow until you encounter an operation with a priority of 0 or reach the end of the operation sequence.\
+Store the result in an intermediate result variable, "rezultat intermediar."\
+Perform the first operation between the intermediate result and the first operand.\
+Store the result in a variable, "rezultat."\
+Jump from the current index to the index of the last term used and continue the algorithm.\
+iii. The operations before and after the current operand have a priority of 0:\
+Perform the calculation between the result and the current operand.\
+Store the result in the "rezultat" variable.\
+iv. Move on to a new iteration.\
+Return the value of the "rezultat" variable.\
+7. Display the result.
