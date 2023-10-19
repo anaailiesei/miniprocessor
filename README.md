@@ -8,7 +8,7 @@ In the main:
 1. Read the instruction inst.
 2. Print N by calling the function get_N(inst):
    Function get_N (returns the value of N):
-	2.1. Use a mask to obtain the bits corresponding to N (the first 3 bits).
+	(2.1.) Use a mask to obtain the bits corresponding to N (the first 3 bits).
 	2.2. Calculate the value of N by converting the binary number obtained into decimal.
 	2.3. Return the obtained number + 1.
 3. Iterate through all operations in a loop and print them by calling the function get_Nth_op():
