@@ -49,13 +49,16 @@ In the main:
 1. Read the first instruction, inst.
 2. Obtain the values for N and Dim by calling the functions get_N() and get_dim().
 3. Store the operations in a char pointer (operations) by calling the function get_Nth_op().
-4. Find out how many instructions are being read for operands (nr_citiri) using the formula provided in the statement.
+4. "contor" - a counter used to keep track of how many operands have been processed.
 5. Initialize the result to 0.
 6. Read the instructions for operands (instr).
-7. Use a mask to determine the bits corresponding to each operand (iterate through instr in sections of size Dim).
-8. Convert the binary number obtained into decimal.
-9. Perform the calculation between the result (everything before the current operand) and the current operand using the operation corresponding to the two (the operation with the index contor-1).
-10. Print the result.
+7. For each individual instruction:\
+- Break down the instruction into "chunks" of bits, each of size Dim.
+- Find the bits using a mask (bit position is determined by 2 raised to the power of the bit's position, and the remainder when divided by 2), and convert the obtained number from decimal to binary.
+- If a "chunk" is too large, find the bits that fit within the current instruction and convert the number from binary to decimal.
+- Then, move on to the next instruction and find the remaining bits. Concatenate the bits, and convert the resulting number from base 2 to base 10.
+8. Perform the calculation between the result (everything before the current operand) and the current operand using the operation corresponding to the two (the operation with index contor-1).
+9. Print the result.
 
 # Fourth Task
 ## Execute instruction (with operator precedence rule)
