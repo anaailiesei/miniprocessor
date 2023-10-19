@@ -13,12 +13,12 @@ In the main:
 - Return the obtained number + 1.
 3. Iterate through all operations in a loop and print them by calling the function get_Nth_op():
    Function get_Nth_op (returns the N-th operation):
-3.1. Use a mask to obtain the two bits corresponding to the N-th operation (divide by 2 raised to the -position of the bit to be found - and find the remainder when divided by 2).
-3.2. Use the following encoding to determine the operation:
-    00 - '+'
-    01 - '-'
-    10 - '*'
-    11 - '/'
+  - Use a mask to obtain the two bits corresponding to the N-th operation (divide by 2 raised to the -position of the bit to be found - and find the remainder when divided by 2).
+  -  Use the following encoding to determine the operation:
+    -- 0 - '+'
+    -- 01 - '-'
+    -- 10 - '*'
+    -- 11 - '/'
 3.3. Return the operation.
 4. Print Dim by calling the function get_dim():
    Function get_dim (returns the value of Dim):
