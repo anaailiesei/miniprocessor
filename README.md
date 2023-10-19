@@ -72,17 +72,19 @@ In the main:
 2. Obtain the values for N and Dim by calling the functions get_N() and get_dim().
 3. Store the operations in a char pointer (operations) by calling the function get_Nth_op().
 4. prioritate_op - a vector that contains the priorities of operations from the "operations" vector (0 for + or -, 1 for * or /). It is obtained by calling the function "prioritate_operatie," which assigns a priority to each operation.
+   
 	The function takes three parameters:
 	- the number of operations, "N"
 	- the "operations" vector
 	- the "prioritate_op" vector
+
 	Iterate through the "operations" vector element by element.
 	Each element of "operations" is assigned a number (0 for + or -, 1 for * or /) that signifies the operation's priority.
-5. "operanzi" - vectorul care contine operanzii (in baza 10)
+6. "operanzi" - vectorul care contine operanzii (in baza 10)
 Vectorul se obtine apeland functia get_operanzi care este o extindere a
 functionalitatii task-ului 3. In loc sa se calculeze un rezultat, de fiecare
 data cand se obtine un operand acesta se "retine" in vectorul operanzi
-6. Rezultatul se calculeaza folosind functia "calculator":
+7. Rezultatul se calculeaza folosind functia "calculator":
 Functia primeste 4 parametrii:
 		- N = numarul de operatii
 		- vectorul "operanzi" 
@@ -122,5 +124,5 @@ Se disting urmatoarele cazuri:
 
 	Se returneaza valoarea variabilei rezultat
 
-7. Se afiseaza rezultatul 
+8. Se afiseaza rezultatul 
  
