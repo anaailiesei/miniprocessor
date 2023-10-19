@@ -83,19 +83,19 @@ The function takes four parameters:
 - the "prioritate_op" vector\
 Iterate through all operands, starting from the second one (index 1), in a "for" loop from 0 to N.\
 Distinguish the following cases:\
-i. The first operation in the sequence has a priority of 1:\
+	i. The first operation in the sequence has a priority of 1:\
 Perform all successive operations with a priority of 1 until you encounter an operation with a priority of 0 or reach the end of the operation sequence.\
 Store the result in a variable, "rezultat."\
 Jump from the current index to the index of the last term used and continue the algorithm.
-ii. The first operation in the sequence has a priority of 0, but a priority-1 operation follows it:\
+	ii. The first operation in the sequence has a priority of 0, but a priority-1 operation follows it:\
 Perform all successive operations with a priority of 1 that follow until you encounter an operation with a priority of 0 or reach the end of the operation sequence.\
 Store the result in an intermediate result variable, "rezultat intermediar."\
 Perform the first operation between the intermediate result and the first operand.\
 Store the result in a variable, "rezultat."\
 Jump from the current index to the index of the last term used and continue the algorithm.\
-iii. The operations before and after the current operand have a priority of 0:\
+	iii. The operations before and after the current operand have a priority of 0:\
 Perform the calculation between the result and the current operand.\
 Store the result in the "rezultat" variable.\
-iv. Move on to a new iteration.\
+	iv. Move on to a new iteration.\
 Return the value of the "rezultat" variable.\
 7. Display the result.
